@@ -1,0 +1,220 @@
+Log4J:
+
+1. It is a Tracing or Logging Tool used in Specially in Production Environment. It is used to
+find success messages, information, warnings, errors in application while using it.
+
+2. By Default any Message/Error will be printed on Console, which is temporary location, it
+can show only few lines like last 100 lines.
+
+3. To see all problems from beginning to till date use Log4j concept.
+
+4. Log4J can write problems/error to File(.log), Database, Email, Network etc..`
+
+5. Log4J provides Error Details like Exception type, class and method with line number it
+occured, Date and time also other information ..
+
+6. Log4J also supports writing errors to Console also.
+
+7. Using System.out.println prints only on console, but not to file or any other memory.
+
+
+
+Log4J has 3 components:
+
+1. Logger (LOG) Object: This object must be created inside the class as a instance variable. It is
+used to enable Log4J service to current class. If this object is not created in the class then Log4J
+concpet will not applicable(will not work)for that class.
+
+
+ It has 5 priority methods with names
+(along with order)
+
+pl  Name    Method
+
+1   DEBUG     debug(msg)
+2   INFO      info(msg)
+3   WARN      warn(msg)
+4   ERROR     error(msg)
+5   FATAL     fatal(msg)
+-   OFF       -
+
+a. debug(msg) : It prints a message with data. It is used to print a final result of process.
+Like EmpId after saved is : 2362.
+
+b. info(msg) : It is used to print a simple message. Like process state-I done, if block end.
+Email sent etc..
+
+
+c. warn(msg): It is used to print warning messages. Like Collection is not with Generic, local
+variable not used, resource not closed etc...
+
+d. error(msg): It is used to print Exceptions like NullPointer, ArrayIndex, SQLException etc..
+
+e. fatal(mgs) : It indicates very high level problem. Like Server/DB Down, Connection
+timeout, Network broken, Class Not Found etc...
+
+OFF is used to disable Log4J concept in application. Log4J code need to be deleted.
+
+__________________________________________________________________________
+2. Appender : It will provide details for "Where to print Message?". Means in what type of
+memories, messages must be stored.
+
+i. File use FileAppender  *****
+
+ii. Database use JdbcAppender
+
+iii. Email use SmtpAppender
+
+iv. Console use ConsoleAppender
+
+v. Network use Ftp(Telnet)Appender
+
+In one Application we can use more than one appender also.
+
+____________________________________________________________________________
+3. Layout : It provide the format of message to be printed.
+ Possible layouts are:
+
+i. Simple Layout : Print message as it is
+
+ii. HTML Layout : Print message in HTML format(<html><body>....)
+
+iii. XML Layout: Print message in XML format (<Errors><Type>..<Message>..)
+
+iv. Pattern Layout : This class provides output pattern for a message that contains date, time,
+class, method, line number, thread name, message etc..
+
+In development mostly used Appender is FileAppender and Layout is Pattern Layout
+
+
+
+
+a)Date&Time pattern
+ %d = date and time
+examples:
+a) %d
+b) %d {dd-MMM-yy hh:mm:ss SSS}
+c) %d {dd-MM-yy hh:mm:ss SSS}
+d) %d {HH:mm:ss}
+e) Here meaning of every word used
+f) in date pattern is,
+g) dd = date
+h) MMM = Month Name
+i) MM = Month number
+j) yy = Year last two digitis
+k) yyyy = Year in 4 digits
+l) hh = Hours in 12 format
+m) HH = Hours in 24 format
+n) mm = Minutes
+o) ss = Secs
+p) SSS = MillSecs
+ %C = Class Name
+ %M = Method Name
+ %m = Message
+ %p = Priority method name(DEBUG,INFO..)
+ %L = Line Number
+ %l = Line number with Link
+ %n = New Line(next line)
+ %r = time in milli sec.
+ %% = To print one '%' symbol.
+ we can also use symbols like - [] , /
+One Example Pattern with all matching "%d-%C[%M] : {%p}=%m<%L> %n "
+
+
+
+
+
+
+
+
+
+Example :
+
+
+package com.BikkadIT;
+
+import java.io.IOException;
+
+import org.apache.log4j.Appender;
+import org.apache.log4j.ConsoleAppender;
+import org.apache.log4j.FileAppender;
+import org.apache.log4j.HTMLLayout;
+import org.apache.log4j.Layout;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PatternLayout;
+import org.apache.log4j.SimpleLayout;
+import org.apache.log4j.xml.XMLLayout;
+
+public class Test {
+
+private static Logger log=	Logger.getLogger(Test.class);
+
+
+public static void main(String[] args) throws IOException {
+	
+	//Layout layout=new SimpleLayout();
+	//Layout layout=new HTMLLayout();
+	//Layout layout=new XMLLayout();
+	//Layout layout=new PatternLayout("%p \n");
+//	Layout layout=new PatternLayout("%p %d \n");
+//	Layout layout=new PatternLayout("%p %d %C \n");
+	//Layout layout=new PatternLayout("%p %d %C %M \n");
+//	Layout layout=new PatternLayout("%p %d %C %M %L \n");
+//	Layout layout=new PatternLayout("%p %d %C %M %L %l  \n");
+//	Layout layout=new PatternLayout("%p %d %C %M %L %l %m \n");
+//	Layout layout=new PatternLayout("%p %d{yyyy/MMM/dd hh:mm:ss} %C %M %L %l  %n");
+	Layout layout=new PatternLayout("%d-%C[%M] : {%p}=%m<%L> %n ");
+	
+	
+	//Appender app=new ConsoleAppender(layout);
+	Appender app=new FileAppender(layout,"C:\\Users\\HP\\Desktop\\data.log");
+	
+	
+	log.addAppender(app);
+	
+	log.debug("This is debug message ");
+	log.info("This is info Message");
+	log.warn("This is Warn message");
+	log.error("This is error message");
+	log.fatal("This is fatal Message");
+		
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

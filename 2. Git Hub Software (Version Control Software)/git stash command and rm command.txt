@@ -1,0 +1,20 @@
+git rm --cached Demo1
+
+This means that remove this file from staged area to untracked area. Till now it will be stored onto temporary memory.
+=========================================================================
+
+git stash 
+means store the EmployeeController into temporary area for completing urgent tasks like Employee POJO class.
+
+git stash apply 
+to get EmployeeController back into our project from Temporary area.
+
+git log
+used to see status of all commited files
+
+git stash list
+to see the list of files are present inside stash
+
+git stash clear
+to clear the git stash list we using this command.
+===========================================================================================================

@@ -1,0 +1,113 @@
+What is SDLC ?
+------------------------------------------------------------------------
+-> SDLC stands for software development life cycle.
+
+-> SDLC explains application development process from starting to ending.
+
+-> There are 7 stages involved in SDLC.
+
+	1) Requirements Gathering
+	2) Requirements Analysis
+	3) Requirements Design
+	4) Development
+	5) Testing
+	6) Deployment
+	7) Maintenence
+-------------------------------------------------------------------------
+-Methodologies
+------------------------------------------------------------------------
+1) Waterfall Model
+2) V-Model
+3) Iterative Model
+4) Spiral Model
+5) Agile Model (Currently Trending In Market)
+------------------------------------------------------------------------
+-> In Waterfall model we will follow sequential process.
+ All Phases will be completed one after other.
+-> Requirements & Budget are fixed in waterfall model.
+-> Accomdating New changes in waterfall model is difficult
+
+----------------------------------------------------------------------------------
+-> Agile Methodology is a practice that promotes continuous iteration of development
+ and testing throughout the software development lifecycle of the project. 
+
+-> Both development and testing activities will happen parallely in Agile Methodology.
+
+----------------------------------------------------------------------------------
+Agile Terminology
+----------------------------------------------------------------------------------
+Product Owner
+Scrum Master
+Tech Lead
+Team Members
+
+
+-> Product Owner is the person who is responsible for devlivering project/product to client.
+
+-> Scrum Master is the person who will manage, monitor and colloborate agile team members work.
+
+-> Tech Lead is the person who is responsible to solve technical problems in project
+ (Kind of Team Lead)
+
+-> Team Members nothing but Developers & Testers.
+----------------------------------------------------------------------------------
+
+Story
+Story Points
+Backlog Grooming
+Backlog
+Sprint Planning
+Sprint
+Scrum
+Mid Iteration Review
+Retrospective
+-----------------------------------------------------------------------------------
+
+-> Story nothing but a task that we have to work on.
+
+-> For Every Story we will have story points. Story points will decide duration 
+to complete that story.
+
+		3 points - 1 day task
+
+		5 points - 2 days task
+
+		8 points - 3 days task
+
+-> Backlog Grooming is the meeting that will be conducted by Scrum Master with
+ Team members to discuss whatever task we have to do in sprint in the project.
+
+-> Once Backlog Grooming meeting got completed we will create backlog stories in JIRA.
+
+Note: In project any body can create backlog stories.
+
+-> Sprint Planning is the meeting that will be conducted by Scrum Master to prioritize
+ the stories which are in the backlog.
+
+-> Sprint means the stories that are prioritized in Sprint Planning for fixed durtion to complete.
+ Sprint duration will be 2 weeks.
+
+-> Mid-Iteration Review is the meeting that will be conducted by Scrum Master once
+ first week completed in Sprint to review stories which are completed and which are in pending.
+
+-> Retrospective is the meeting that will be conducted by Scrum Master once Sprint got completed.
+ In Retrospective meeting we will discuss about last 2 weeks work, lessons learnt,
+ achievements, improvements etc.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

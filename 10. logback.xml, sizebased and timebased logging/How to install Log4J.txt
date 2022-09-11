@@ -1,0 +1,52 @@
+Log4J Tool
+-----------------------------------------------
+create workspace log4J for STS /Ecllipse
+
+create simple spring boot project with web dependecy
+demosts project
+--------------------------------------
+To store the messages we use logging means Log4J 
+=====================================================
+
+Create Simple Maven project
+new -> Maven Project
+com.BikkadIt-->Group Id
+Artifact -->LogApp
+
+add maven 1.8 java plugin---(Add this plugin)
+search maven repository--> Log4J(Apache log4j dependency)
+add this dependency
+Create dependencies tag
+In which add this dependency
+In this way pom.xml setted up
+---------------------------------------------
+1)create package structure
+class Test in com.bikkadit
+Logger is class (static method getLooger())
+private static Logger log = Logger.getLogger(Test.class);
+
+========================================================================================
+
+2)create maven project
+add log4j.peroperties in src/resources folder
+and copy paste configuration from our notes.
+and run
+desktop create .log file ,there all messages are stored.
+
+=================================================================
+3)create sts project
+create controller, HomeController
+add datasources configurations in application.properties
+there will be file created in parallel to pom.xml named Myapp1.log
+there you can see all stored messages.
+
+==========================================================================================
+
+4)create logback.xml file (in src/resources...separate logback.xml file)
+And do some changes
+like --put file name
+put -- package name (com.bikkadit.)
+==========================================================================================
+
+
+

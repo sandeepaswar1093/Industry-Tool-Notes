@@ -1,0 +1,136 @@
+Log4J:
+
+1. It is a Tracing or Logging Tool used in Specially in Production Environment. It is used to
+find success messages, information, warnings, errors in application while using it.
+
+2. By Default any Message/Error will be printed on Console, which is temporary location, it
+can show only few lines like last 100 lines.
+
+3. To see all problems from beginning to till date use Log4j concept.
+
+4. Log4J can write problems/error to File(.log), Database, Email, Network etc..`
+
+5. Log4J provides Error Details like Exception type, class and method with line number it
+occured, Date and time also other information ..
+
+6. Log4J also supports writing errors to Console also.
+
+7. Using System.out.println prints only on console, but not to file or any other memory.
+
+
+
+Log4J has 3 components:
+
+1. Logger (LOG) Object: This object must be created inside the class as a instance variable. It is
+used to enable Log4J service to current class. If this object is not created in the class then Log4J
+concpet will not applicable(will not work)for that class.
+
+
+ It has 5 priority methods with names
+(along with order)
+
+pl  Name    Method
+
+1   DEBUG     debug(msg)
+2   INFO      info(msg)
+3   WARN      warn(msg)
+4   ERROR     error(msg)
+5   FATAL     fatal(msg)
+-   OFF       -
+
+a. debug(msg) : It prints a message with data. It is used to print a final result of process.
+Like EmpId after saved is : 2362.
+
+b. info(msg) : It is used to print a simple message. Like process state-I done, if block end.
+Email sent etc..
+
+
+c. warn(msg): It is used to print warning messages. Like Collection is not with Generic, local
+variable not used, resource not closed etc...
+
+d. error(msg): It is used to print Exceptions like NullPointer, ArrayIndex, SQLException etc..
+
+e. fatal(mgs) : It indicates very high level problem. Like Server/DB Down, Connection
+timeout, Network broken, Class Not Found etc...
+
+OFF is used to disable Log4J concept in application. Log4J code need to be deleted.
+
+__________________________________________________________________________
+2. Appender : It will provide details for "Where to print Message?". Means in what type of
+memories, messages must be stored.
+
+i. File use FileAppender  *****
+
+ii. Database use JdbcAppender
+
+iii. Email use SmtpAppender
+
+iv. Console use ConsoleAppender
+
+v. Network use Ftp(Telnet)Appender
+
+In one Application we can use more than one appender also.
+
+____________________________________________________________________________
+3. Layout : It provide the format of message to be printed.
+ Possible layouts are:
+
+i. Simple Layout : Print message as it is
+
+ii. HTML Layout : Print message in HTML format(<html><body>....)
+
+iii. XML Layout: Print message in XML format (<Errors><Type>..<Message>..)
+
+iv. Pattern Layout : This class provides output pattern for a message that contains date, time,
+class, method, line number, thread name, message etc..
+
+In development mostly used Appender is FileAppender and Layout is Pattern Layout
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

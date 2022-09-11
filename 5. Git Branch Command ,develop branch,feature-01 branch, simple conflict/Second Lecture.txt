@@ -1,0 +1,137 @@
+Why we use git branch
+===========================
+already covered in last lecture
+====================================
+(delete code from santosh and ganesh folder)
+
+git stauts 
+git pull
+in santosh folder(develope branch)
+delete develope brach
+
+how  to move to master branch
+------------------------------- 
+
+git checkout -b master (move to master)
+git branch
+
+----------------------------------------
+
+create develop branch
+
+git clone -b develop urlOfDevelopBranch
+develope branch code into santosh system
+
+git clone -b develop urlOfDevelopBrach
+develope branch code into ganesh system
+
+=====================================================
+imports projects into individuals
+
+create feature-01 branch from deveope branch
+create feature-02 branch from develope branch
+
+git clone -b feature-01 url (Santosh)
+git clone -b feature-02 url (Ganesh)
+
+Santosh is creating on feature-01
+====================================
+StudentController, StudentServiceImpl
+public List<String> getAllStudent()
+{
+return null;
+}
+public List<String> getAllStudent()
+{
+return null;
+}
+Santosh completed feature-01
+Ganesh completed feature-02
+========================
+git stauts (in Santosh system)
+git add --a
+git status
+git commit -m "SMS-01: Get All Student implementation"
+git status
+working tree clean
+git push
+ganesh on feature -02(task completed)
+compare and pull
+base : develpe  compare : feature 02
+merging from feature 02 to develope
+confirm merge
+delete feature-02 branch
+========================================
+santosh on feature-01
+santosh making code onto feature-01
+CitizenController
+public void updateCitizen()
+{
+}
+CitizenServiceImpl
+public void updateCitizen()
+{
+
+}
+
+Now santosh go onto feature 01
+git add--a
+git commit -u "SMS-01: Update Citizen Implementation"
+git status
+git push
+now code onto feature-01
+base develope -<- compare feature -01
+meging from feature 01 to devlope
+
+=======================
+After completing development
+
+base : master from develope
+merging from develop to master
+Now final code is into master branch
+================================================
+
+Git Conflict#####******
+=================
+
+Empty the Santosh And Ganesh Folders
+
+git clone urlfromMasterBranch (Ganesh And Santosh)
+
+Go into Ganesh (import project into Eclipse)
+Go into Santosh (import project into Eclipse)
+
+Ganesh
+============
+go into main method
+int a = 30;
+
+Santosh
+==============
+go into main method
+String name="Santosh";
+======================================
+
+Santosh is Pushing
+git status 
+git add --a
+git commit -m "Variable Decalration"
+git push 
+(code pushed into central repository master branch)
+
+
+Ganesh is pushing
+git status
+git add --a
+git commit -m "declared variable"
+git pull
+git push
+(Error Here)
+reslove manually
+git stauts
+git add --a
+git commit -m "git conflict resolved"
+git status
+git push
+( Now code is goes into pushed)
+--------------------------------------------------------------

@@ -1,0 +1,106 @@
+How to implement Logging in Realtime Project
+----------------------------------------------------------------------------------
+
+-> When the project deployed into production server, multiple users will access our application at a time.
+
+-> When multiple users are accessing our application then there is a chance of getting some issues in our application.
+
+-> To identify root cause of the issues we will use log messages.
+
+-> As many users are accessing our application so many log messages will be printed.
+
+-> In realtime we will not use only one log file to store application log messages because so many logs will be generated on daily basis.
+
+	Ex: facebook will be used by crores of ppl daily
+	Ex: gmail will be used by crores of ppl daily
+	Ex: flipkart & amazon will be used by crores of ppl daily
+
+-> To resolve this issue we will use below technique
+
+		RollingFileAppender
+-> RollingFileAppender we can implement in 2 ways
+
+		1) TimeBasedRolling
+		2) SizeBasedRolling
+----------------------------------------------------------------------------------
+
+-> In order to implement TimeBasedRolling or SizeBasedRolling we will use logback.xml file in SpringBoot application.
+
+-> logback is the default logging technique used by Spring Boot.
+
+-> Keep logback.xml file inside src/main/resources folder
+
+--------------------------logback.xml----------------------------------------------------------------------
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="ConsoleAppender"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder>
+			<pattern>
+				%d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] - %msg%n
+			</pattern>
+		</encoder>
+	</appender>
+
+	<appender name="RollingAppender"
+		class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<file>app.log</file>
+		<encoder
+			class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+			<Pattern>%d{MM:dd HH:mm:ss.SSS} [%t] [%level] [%logger{36}] - %msg%n
+			</Pattern>
+		</encoder>
+		<rollingPolicy
+			class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<fileNamePattern>app_%d{dd-MM-yyyy}.log</fileNamePattern>
+			<maxHistory>10</maxHistory>
+			<totalSizeCap>10KB</totalSizeCap>
+		</rollingPolicy>
+	</appender>
+
+	<!-- Logging custom package -->
+	<logger name="com.bikkadIt" level="info" additivity="false">
+		<appender-ref ref="ConsoleAppender"></appender-ref>
+		<appender-ref ref="RollingAppender"></appender-ref>
+	</logger>
+
+	<!-- Logging spring boot package -->
+	<logger name="org.springframework.boot" level="info"
+		additivity="false">
+		<appender-ref ref="ConsoleAppender"></appender-ref>
+		<appender-ref ref="RollingAppender"></appender-ref>
+	</logger>
+
+
+	<root level="info">
+		<appender-ref ref="ConsoleAppender"></appender-ref>
+	</root>
+</configuration>
+------------------------------------------------------------------------------------------------------
+
+
+
+
+package com.example.demo.controller;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
+@RestController
+public class WelcomeRestController {
+
+	
+private static Logger logger=LoggerFactory.getLogger(WelcomeRestController.class);
+	
+	@GetMapping("/welcome")
+	public String welcomeMsg() {
+		logger.debug("welocme() method execution started");
+		String msg="Welcome to BikkadIt";
+		logger.debug("welocme() method execution ended");
+		logger.info("welcome() method executed successfully");
+		return msg;
+	}
+}

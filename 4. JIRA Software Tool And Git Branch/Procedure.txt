@@ -1,0 +1,112 @@
+How to make Account onto JIRA?
+======================================
+jira login search onto google
+
+-> Jira by atlassian company (go to login) 
+After sign up with Google go to --->
+products-->software-->Jira Software-->Scurm --> click on it
+
+=============================================================
+add url of your name like ====sandeepaswar.atlassian.net
+click on next--->till you got scrum dashboard.
+=====================================================
+
+
+Git branch command
+============================================
+
+branches are nothing but code dividation into multiple parts
+master branch is default branch in repository.
+
+git clone -b develop pasteHereDevelopeResositoryURL
+Santosh is cloning into his system from develope branch.
+
+git clone -b develop paste
+Ganesh is cloning into his system
+
+Santosh pushing code into develope branch
+=================================================
+git branch --> to see current branchgit 
+git add --a
+git status 
+git commit -m "AR:01 Employee Controller added"
+git push
+
+
+ganesh is pushing code into develope branch
+============================================
+git pull ---->first
+git branch
+git status
+git commit -m "AR-02: Service Impl Added"
+
+
+Developement Completed
+===============================
+now merge from develope branch to master branch.
+create pull request
+merge pull request
+confirm merge
+
+
+now testing team has to work on it
+========================================
+create QA branch
+
+santosh is doing work of testing(QA).
+
+git init
+git clone -b QA UrlHere
+
+
+Ganesh
+
+git init 
+git clone -b QA UrlHere
+
+
+import the projects into ganesh and santosh folder
+=====================================================
+santosh
+==============
+git status
+git add --a
+git commit -m "AR-03: Controller tested"
+git push
+
+
+ganesh
+=============
+git pull
+create tesing of service Layer
+ServieImpl Test Class created int src/test/java
+testing completed
+
+git status
+git add --a
+git commit -m "AR-04: Service  Impl tested"
+git push
+
+=======================
+
+code comes in a brach QA only not into master
+
+merging from QA to master
+create pull request
+merge pull request
+delete branch(QA deleted)
+now testing completed and code is into master.
+====================================================
+
+create release  branch(handling here conflict)
+==========================================================
+conflict created when two developers created code for same class,
+like code for EmployeeController.
+
+
+
+
+
+
+
+

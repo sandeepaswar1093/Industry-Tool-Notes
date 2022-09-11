@@ -1,0 +1,31 @@
+First Time Email And Username Configuration.
+==============================================
+$ git config --global user.email "you@example.com"
+$ git config --global user.name "sandeepaswar1093"
+============================================================
+
+Push the files from local repository to Central repository
+=======================================================================
+git remote add origin https://github.com/sandeepaswar1093/FirstGitHubApp.git
+
+
+=============================================================================
+
+How to clone central repository files into our system:
+=========================================================
+git clone https://github.com/sandeepaswar1093/FirstGitHubApp.git 
+(By using this we can take files from central repository into our own local repository.)
+
+===============================================================================================
+
+
+git push -u origin master  (for push files , first time only)
+=================================================================
+next time only use git push
+
+
+git clone https://url (for copy the project from central repository into your directory)
+
+git push 
+
+git pull (If some changes made into projects by another team member , then you can see into your directory by using pull command.)

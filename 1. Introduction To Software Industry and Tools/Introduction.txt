@@ -1,0 +1,408 @@
+Java Realtime Project (Full Stack Development)
+----------------------------------------------
+
+Pre-Requisite
+----------------
+1) Core Java & Adv Java
+
+2) Spring Core & Spring MVC
+
+3) Spring Boot & Restful Services (parallely u can learn)
+
+4) Hibernate (ORM)
+
+5) SQL
+
+
+Course Content:
+---------------
+
+Part-1 : Software Industry & Software Projects
+
+Part-2 : Realtime Tools
+-----------------------
+Maven
+Gradle
+
+SVN
+Git
+BitBucket
+
+Agile with JIRA
+JUnit
+Mocking
+Jacocco
+
+Log4J
+Log Monitoring tools (Putty, WinScp, Splunk)
+
+JMETER
+Sonar Qube
+Docker
+MAT
+Jenkins
+Apache POI
+iText PDF
+Swagger
+SOAP UI
+POSTMAN
+
+Part-3 : Mini Projects
+-----------------------
+All mini projects we will develop using spring boot 
+
+01 - Mini Project
+
+02 - Mini Project
+
+03 - Mini Project
+
+04 -Mini Project
+
+05 -Mini Project
+
+06-Miniproject 
+
+07- Miniproject
+
+
+Part-4 : Major Project
+----------------------
+This major project you can keep in your resume also for attending interviews
+
+
+Part-5: Interview Guide
+------------------------
+
+Interview Questions & Answers
+
+Resume Preparation
+Naukri profile creation
+Day to day workschedule
+First Day and Last Day process in company
+
+Part 6: Mock Interview
+
+
+
+
+
+
+
+Part-1
+------
+
+Software companies are categorized into 3 types.
+-----------------------------------------------
+1) Product Based 
+
+2) Service Based
+
+3) OutSourcing
+
+Product Based Company
+----------------------
+The companies which are developing products/projects and selling to customers in market are called as product Based Companies.
+
+Ex: Oracle, Microsoft, HP, DELL, SONY etc....
+
+-> In Product Based Companies interviews, they will concentrate on 
+
+	1) Logical Thinking
+	2) DataStructures
+	3) Algorithms
+	4) Design Patterns
+	
+
+-> Product Based Company interview process will be tough
+
+-> Product Based Companies will offer high packages
+
+	Package = No.Of years of exp * 5 - 6 lakhs
+
+
+Service Based Companies
+-----------------------
+The companies which are developing projects based on client requirements are called as Service based comapnies.
+
+Ex : TCS, Infosys, HCL, Deloitte, BiralSoft, Wipro, Capgemini, CTS, CGI,l&t etc....
+
+-> Interview process in service based companies
+	
+	1) Spring Boot
+	2) Rest API
+	3) Microservices
+	4) Angular / React 
+
+-> In service based companies package will be less when compared with Product Based Companies.
+
+	Package  = No.of years of exp * 2.5 or 3  
+
+
+Outsourcing companies
+----------------------
+The companies which are going to deploy resources in client location are called as Outsourcing companies.
+
+Ex : Magna Info Tech
+
+
+
+What is Project ?
+----------------
+-> In IT industry project means collection of programs which is used to achieve some goal.
+
+Why we need to develop Software Project?
+-----------------------------------------
+-> Using software project we can reduce human efforts.
+
+Ex : 
+----
+Railway Ticket Booking
+
+Net Banking
+
+Swiggy & Zomoto
+
+Zoom
+
+Types of project
+----------------
+1) Scratch development projects (10 %)
+
+2) Maintenence/Support projects (75 %)
+
+3) Migration projects (15 %)
+
+
+-> Brand new projects are called as Scratch development projects. We will start project development from beginning.
+
+-> We need to provide maintenence/support for the projects which are running in public domain.
+
+	-> We will get change requests (CR)
+	-> We will get enhancements
+	-> We will get bugs
+
+-> Projects which are changing from one technology to another technology comes under migration projects.
+
+
+	IBM Mainframes --------------------> Java 
+
+	EJB 	----------------------------> Spring Boot
+
+	JSP	 --------------------------> Angular / React
+
+
+
+Functional Domains
+------------------
+Functional domain represents what type of services we are providing from our project
+
+-> Banking Domain
+
+-> Insurance Domain
+
+-> Healthcare Domain
+
+-> Telecom Domain
+
+->Ariculture domain 
+
+-> E-Commerce Domain etc.....
+
+
+Technology Stack
+-----------------
+Technology stack represents what are the technologies using in the project.
+
+
+
+
+1) Teams in Project
+
+2) Software Engineer Role Chart
+
+-> In Project mainly we can see two types of teams
+
+	1)Onshore/Onsite Team
+	2)Offshore/Offsite Team
+
+-> The team which is working in client location is called as OnShore Team.
+   Onshore Team is also called as Onsite team.
+
+-> Team team which is working in non-client location is called as Offshore team
+
+-> Onshore & Offshore teams will communicate through bridge calls for project discussions.
+
+-> In companies we will use below softwares for bridge calls
+
+	Ex: Microsoft Teams, Skype Business, Jabber etc...
+
+
+Note: Based on client requirement offshore team member will travel to Onshore  and Onshore Team member will travel to offshore.
+
+
+Roles in IT industry
+--------------------
+-> All companies will not follow same role chart
+
+-> Role Chart will change from company to company
+
+-> Below are the roles we can see in Most of the companies
+
+1) Associate Software Engineer (0-2 yrs experience)
+
+2) Software Engineer / Consultant (2-5 yrs experience)
+
+3) Sr.Software Engineer/ Sr.Consultant (5-8 yrs experience)
+
+4) Team Lead (8-10 yrs experience)
+
+5) Project Manager & Architect (10-14 yrs Years)
+
+6) Sr.Project Manager (14-20 Years)
+
+7) Director
+
+8) CEO
+
+
+
+
+Java Realtime Tools That Every Developer Should Know
+--------------------------------------------------------------------
+
+1) Debugging
+
+2) Build Tools
+	 - Maven
+	 - Gradle
+
+3) Version Control Tools
+	  - SVN
+	  - GIT HUB
+	  - Bit Bucket
+
+4) Logging
+	   - Log4J
+	   - Log4J2
+	   - Logback
+	   - SLF4J
+
+5) Log Monitoring Tools
+	    - Putty
+	    - WinScp
+	    - Splunk
+
+5) Unit Testing 
+	     - JUnit
+	     - Mocking
+	 
+6) Code Coverage Tools
+	     - Jacocco
+
+7) Code Review Tools
+	      - PMD
+	      - Sonar Qube
+
+8) Reporting Tool
+	       - BugZilla
+	       - JIRA
+
+9) CI & CD Tool
+	       - Jenkins
+
+10) Containerization 
+		 - Docker
+
+11) API Testing Tools
+		 - SOAP UI
+		 - POST MAN
+
+12) Performance Testing Tool 
+ 		- JMETER
+
+13) Reporting Tools
+		 - Apache POI
+		 - iText
+
+14) API Documentation 
+		 - Swagger & Swagger UI
+
+
+ Do's and Don't s in IT industry
+--------------------------------------------------------------
+
+Don't in IT Company
+---------------------
+-> Don't call anybody as sir.
+
+-> Don't use gmail, facebook, Dropbox, drive etc in office provided system.
+
+-> We should not send any project/company/client related info or docs to our personal gmail account.
+
+-> We should not miss any meetings related to project and company.
+
+-> Don't comment on any body regarding their dress or looks or color or religion or caste.
+
+-> Don't mis behave with anybody
+
+-> Don't reveal your client information to others
+
+-> Don't ask anybody about their package or salary.
+
+
+
+Do's in IT Company
+-------------------
+-> Maintain good relation with team members
+
+-> Join meetings on time
+
+-> Be in office on time
+
+-> Improve networking...
+
+-> If you are planning for any vacation, apply for leave well in advance.
+
+-> If you want to go out for your personal work during office hours, you should take permission from manager.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

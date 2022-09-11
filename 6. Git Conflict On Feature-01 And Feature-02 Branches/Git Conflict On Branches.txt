@@ -1,0 +1,62 @@
+how to resolve conflict at the time of merging two branches.
+============================================================
+GitConflictDemo repository in GitHub(Make it for Operations.)
+-----------------------------------------------------------------------
+Team Lead Making Project
+---------------------------------
+GitConflictDemo (Project Name)
+------------------------------
+push onto central repository
+git init (Team Lead)
+git status
+git add --a
+git status
+git commit -m "Project added to the central repository"
+
+git remote add origin https://
+git status
+git push -u origin master
+(Team lead Done)
+=================================================
+
+Santosh is cloning project into his system.
+------------------------------------------------
+Feature-01
+git init
+git clone -b Feature-01 urlOfFeature-01
+
+Ganesh is cloning into his system
+git clone -b feature-02 url
+-----------------------------------------
+Both are having projects in there Folder.
+
+Now import projects into their workspaces.
+------------------------------------------------
+Santosh---->
+In main method.
+String welcomeMsg = "Welcome To bikkad It"; (line 13)
+-------------------------------------
+Ganesh--->
+In main method
+String greetMsg ="Good Morning"; (line 13)
+
+----------------------------both are pushing
+Santosh Pushed
+Ganesh is pushed
+Done
+-----------------------------------------
+merging from feature-01 to master branch
+crate pull request
+confirm merge
+delete feature-01
+------------------------------------
+merging from feature-02 to master branch
+create pull request
+conflict comes
+click on resolve conflict
+now do merge pull request
+====================================================================
+
+
+
+

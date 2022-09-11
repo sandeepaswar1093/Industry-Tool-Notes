@@ -1,0 +1,95 @@
+1) What is Logging?
+
+-> It is the process of storing application execution details.
+
+2) Why we need logging?
+
+-> In Realtime, our application will be deployed into multiple Environments like DEV, QA, UAT, PILOT and PROD.
+
+-> When application running in those environments, if any functionality not working then it is very difficult to
+ understand the problem.
+
+-> To trace the problems in application we will use Logging.
+
+3) What are the Components available in Logging?
+
+-> To work with logging we will use below 3 components
+
+		1) Logger
+		2) Layout
+		3) Appender
+
+-> Logger is the class which provided methods to generate log messages based on log levels
+
+-> Layout will re-present format of the log message (what information should be there in log msg)
+
+-> Appender will represent destination of log message (Where log msg should be printed)
+
+-> We are having below appenders
+
+		i) ConsoleAppender
+		ii) FileAppender
+		iii) JdbcAppender
+		iv) SMTPAppender etc...
+
+
+4) What are the log levels available?
+
+	TRACE, DEBUG, INFO, WARN, ERROR, FATAL
+
+-> If we set one log level, then log messages will be printed from that level to all higher levels.
+
+-> If we set log level as INFO, then it will print INFO msgs, WARN msgs, ERROR msgs, FATAL msgs
+
+-----------------------------------------------------------------------------------------------
+
+-> Generally we have to write some configuration for logging. Earlier people used to write that configuration using log4j.properties
+
+-> If we are developing our application using Spring Boot, it will provide default configuration for logging.
+
+		Layout -> PatternLayout
+		Appender -> ConsoleAppender
+
+Note: Spring Boot will perform logging using logback (Default behaviour)
+
+-> If required we can customize logging configuration in Spring Boot application.
+
+
+Example :
+
+package com.bikkadIt.controller;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+public class WelcomeRestController {
+
+	private static Logger logger=LoggerFactory.getLogger(WelcomeRestController.class);
+	
+	@GetMapping("/welcome")
+	public String welcomeMsg() {
+		logger.debug("welocme() method execution started");
+		String msg="Welcome to BikkadIt";
+		logger.debug("welocme() method execution ended");
+		logger.info("welcome() method executed successfully");
+		return msg;
+	}
+}
+
+
+
+server.port=9090
+
+logging.level.root=INFO
+
+logging.file.name=MyApp1.log
+
+
+
+
+
+
+ 

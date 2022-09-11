@@ -1,0 +1,118 @@
+Version Control Software
+----------------------------------------------------------------------------------
+-> Multiple developers will be involved in project development.
+
+-> Developers will be working from different locations.
+
+> We will use version control softwares in our project mainley for below 2 reaons
+
+	1) Source Code Integration
+	2) Source Code Changes Tracking
+
+----------------------------------------------------------------------------------
+
+Problem-1 : How all the developers code will be integrated ?
+
+Problem-2 : How to track which developer made code changes ?
+
+-----------------------------------------------------------------------------------
+
+-> To resolve above 2 problems we will use "Version Control Software" in the project.
+
+-> Below are the version control softwares available in the market.
+
+			1) CVS ---------------outdated
+			2) Clear Case --------outdated
+			3) SVN ------------------almost outdated
+			4) Git Hub ------------Trending
+			5) BitBucket-----------Trending
+-----------------------------------------------------------------------------------
+Git Hub
+-----------------------------------------------------------------------------
+
+1) What is Git Hub?
+Ans) It is a cloud provider
+
+2) What is Repository?
+Ans) We will create Repositories in Git Hub. Repository is a place where we will store our code.
+
+Note: For one project one repository will be created.
+
+3) What is Git Client?
+Ans) Git client is a software which is used to perform GIT operations in Git repository.
+
+Note: Every developer will install git client software in thier System.
+------------------------------------------------------------------------
+-> In GIT Hub account we can create 2 types of repositories
+
+	1) Public Repository
+	2) Private Repository
+
+-> Public Repository means anybody can see but we  will choose who can commit
+
+-> Private Repository means we will decide who can see and who can commit.
+
+
+
+
+Git Bash
+------------------------------------------------------------------------
+-> Git Bash is a command line software which is used to perform git operations.
+
+-> We will execute GIT commands using GIT Bash
+
+Git Commands
+-------------
+git help : It will display frequentley used git commands
+
+git help <cmd-name> : To open command documentation
+
+git init : To initialize our folder as git operations folder
+
+git status: To display staged, un-staged and un-tracked files
+
+          Un-Tracked: New Files (We need to add these for commit)
+          These file names will be displayed in red colour.
+	
+
+          Staged : Files are ready to commit (These are already added)
+          These file names will be displayed in green colour.
+
+
+	Un-Staged: Modified Files (We need to add these for commit)
+
+	
+
+
+
+git add : It is used to stage the files
+
+		git add <file-name> => Used for staging specific file
+
+		git add --a  ==> To stage all modified & new files
+
+git commit : To commit staged files to Git local Repository.
+
+		git commit -m 'msg'
+
+
+git remote add : To add Git Hub Repo URL to our path (Only firsttime we have to do)
+
+git push : To push changes from Git Local repo to Git Hub Central Repository
+
+		git push -u origin main
+
+git reset HEAD <file-name>:
+
+git checkout <file-name> :
+---------------------------------------------------------------------------------------------
+
+
+
+	
+
+
+
+
+
+

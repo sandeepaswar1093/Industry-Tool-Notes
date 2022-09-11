@@ -1,0 +1,39 @@
+Search Git Windows 10 downloads
+===============================================
+After installing Git 
+Right Click On windows Screen
+===============================================
+Git Bash Here
+Git GUI Here ( This Two Options Shows On Your Screen, besides right click)
+
+===============================================
+
+Search Git Hub on google
+====> Make Account on this platform.
+
+===> username : sandeepaswar1093
+====>Password : Sandeep@1093
+
+================================================
+Now DashBoard Displayed Online on website
+===============================================
+
+
+go into created folder -> git init type
+create two files -> Demo And Demo1 Text Files.
+
+git add Demo.txt
+
+git add Demo1.txt
+
+
+=================================================
+
+
+git status
+
+git add --a
+
+git status
+
+git commit -m "Added Successfully"
